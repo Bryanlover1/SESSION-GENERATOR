@@ -28,23 +28,23 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function WASI_MD_QR_CODE() {
+	async function NARUTO_MD_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Wasi_Tech = Wasi_Tech({
+			let Qr_Code_By_Bryan_Tech = Bryan_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
 					level: "silent"
 				}),
-				browser: Browsers.macOS("Desktop"),
+				browser: Browsers.macOS("Safari"),
 			});
 
-			Qr_Code_By_Wasi_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Wasi_Tech.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Bryan_Tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Bryan_Tech.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -58,27 +58,25 @@ router.get('/', async (req, res) => {
 				   let b64data = Buffer.from(data).toString('base64');
 				   let session = await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id, { text: '' + b64data });
 	
-				   let WASI_MD_TEXT = `
+				   let NARUTO_MD_TEXT = `
 *_Session Connected By Wasi Tech_*
 *_Made With 🤍_*
 ______________________________________
 ╔════◇
-║ *『AMAZING YOU'VE CHOSEN WASI MD』*
+║ *『AMAZING YOU'VE CHOSEN NARUTO MD』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _youtube.com/@wasitech1
 ║❒ *Owner:* _https://wa.me/message/THZ3I25BYZM2E1_
-║❒ *Repo:* _https://github.com/wasixd/WASI-MD_
-║❒ *WaGroup:* _https://chat.whatsapp.com/FF6YuOZTAVB6Lu65cnY5BN_
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029VaDK8ZUDjiOhwFS1cP2j_
-║❒ *Plugins:* _https://github.com/Itxxwasi 
+║❒ *Repo:* _https://github.com/Bryanlover1/Naruto-MD-V1
+║❒ *WaGroup:* _https://chat.whatsapp.com/HsPiKU0POmU6Pbg4SLwi90
+║❒ *WaChannel:* _https://whatsapp.com/channel/0029VacpEdXIt5rqKLB9nC1L
 ╚════════════════════════╝
 _____________________________________
 	
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id,{text:WASI_MD_TEXT},{quoted:session})
+	 await Qr_Code_By_Bryan_Tech.sendMessage(Qr_Code_By_Bryan_Tech.user.id,{text:NARUTO_MD_TEXT},{quoted:session})
 
 
 
@@ -100,6 +98,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await WASI_MD_QR_CODE()
+	return await NARUTO_MD_QR_CODE()
 });
 module.exports = router
