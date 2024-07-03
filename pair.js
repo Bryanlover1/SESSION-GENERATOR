@@ -20,7 +20,7 @@ function removeFile(FilePath){
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function NARUTO_MD_PAIR_CODE() {
+        async function VENOM_MD_PAIR_CODE() {
         const {
             state,
             saveCreds
@@ -56,17 +56,17 @@ router.get('/', async (req, res) => {
                let b64data = Buffer.from(data).toString('base64');
                let session = await Pair_Code_By_Bryan_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
-               let NARUTO_MD_TEXT = `
+               let VENOM_MD_TEXT = `
 *_Pair Code Connected by BRYAN TECH*
-*_Made With 🤍_*
+*_Made With💘_*
 ______________________________________
 ╔════◇
-║ *『 WOW YOU'VE CHOSEN WASI MD 』*
+║ *『 WOW YOU'VE CHOSEN VENOM MD 』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••
-║❒ *Owner:* _https://wa.me/923192173398_
+║❒ *Owner:* _https://wa.me/233263176982_
 ║❒ *Repo:* _https://github.com/Bryanlover1/Naruto-MD-V1
 ║❒ *WaGroup:* _https://chat.whatsapp.com/HsPiKU0POmU6Pbg4SLwi90
 ║❒ *WaChannel:* _https://whatsapp.com/channel/0029VacpEdXIt5rqKLB9nC1L
@@ -82,7 +82,7 @@ _Don't Forget To Give Star To My Repo_`
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    NARUTO_MD_PAIR_CODE();
+                    VENOM_MD_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -93,6 +93,6 @@ _Don't Forget To Give Star To My Repo_`
          }
         }
     }
-    return await NARUTO_MD_PAIR_CODE()
+    return await VENOM_MD_PAIR_CODE()
 });
 module.exports = router
